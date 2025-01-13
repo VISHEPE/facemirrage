@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facial Blemish Detection with Face++</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center my-5">Facial Blemish Detection with Face++</h1>
+    <form action="/analyze" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="image" class="form-label">Upload an Image for Analysis</label>
+        <input type="file" id="image" name="image" accept="image/*" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Upload and Analyze</button>
+    </form>
+  </div>
+</body>
+</html>

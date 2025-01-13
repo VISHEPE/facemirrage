@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analysis Result</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center my-5">Face++ Analysis Result</h1>
+    <div class="text-center">
+      <img src="<%= imageUrl %>" alt="Uploaded Image" class="img-fluid mb-4">
+      <h3><%= message %></h3>
+      <h4>Facial Features Detected:</h4>
+      <h4>Facial Features Detected:</h4>
+<ul>
+  <li>Gender: <%= faceData.attributes && faceData.attributes.gender ? faceData.attributes.gender : 'Not Available' %></li>
+  <li>Age: <%= faceData.attributes && faceData.attributes.age ? faceData.attributes.age : 'Not Available' %></li>
+  <li>Smile: <%= faceData.attributes && faceData.attributes.smile ? faceData.attributes.smile.value : 'Not Available' %></li>
+  <li>Head Pose: <%= faceData.attributes && faceData.attributes.headpose ? JSON.stringify(faceData.attributes.headpose) : 'Not Available' %></li>
+  <li>Blur: <%= faceData.attributes && faceData.attributes.blur ? faceData.attributes.blur.value : 'Not Available' %></li>
+  <li>Eye Status: <%= faceData.attributes && faceData.attributes.eyestatus ? JSON.stringify(faceData.attributes.eyestatus) : 'Not Available' %></li>
+  <li>Emotion: <%= faceData.attributes && faceData.attributes.emotion ? JSON.stringify(faceData.attributes.emotion) : 'Not Available' %></li>
+</ul>
+
+    </div>
+    <a href="/" class="btn btn-secondary">Go Back</a>
+  </div>
+</body>
+</html>
